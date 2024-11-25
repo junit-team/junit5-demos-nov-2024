@@ -1,0 +1,10 @@
+#
+# Java system options
+#
+--class-path
+build/classes/java/test:build/resources/test:junit-platform-console-standalone-1.11.3.jar
+
+#
+# Main entry-point: `junit`
+#
+org.junit.platform.console.ConsoleLauncher
