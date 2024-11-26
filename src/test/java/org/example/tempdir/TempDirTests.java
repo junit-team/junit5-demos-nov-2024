@@ -1,6 +1,7 @@
 package org.example.tempdir;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestReporter;
 import org.junit.jupiter.api.io.TempDir;
 
 import java.nio.file.Files;
@@ -15,7 +16,9 @@ class TempDirTests {
     Path tempDir;
 
     @Test
-    void canReadAndWriteTextFile() throws Exception {
+    void canReadAndWriteTextFile(TestReporter reporter) throws Exception {
+        reporter.publishEntry("File system", tempDir.getFileSystem().getClass().getName());
+
         var testFile = tempDir.resolve("test.txt");
 
         Files.writeString(testFile, "Hello, World!");
