@@ -18,7 +18,7 @@ public class TimeoutTests {
     void slow() {
         printJUnitThreads("slow()");
         try {
-            Thread.sleep(5_000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             System.out.println("Interrupted on thread: " + Thread.currentThread().getName());
 //            waitIndefinitely();
