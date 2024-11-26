@@ -2,7 +2,12 @@
 # Java system options
 #
 --class-path
-build/classes/java/test:build/resources/test:junit-platform-console-standalone-1.11.3.jar
+build/classes/java/test:build/resources/test:junit.jar
+
+#
+# Additional JUnit-related system properties
+#
+-Djunit.platform.execution.dryRun.enabled=false
 
 #
 # Main entry-point: `junit`

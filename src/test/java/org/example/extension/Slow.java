@@ -8,17 +8,15 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class Slow implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
 
-   private static final Duration DURATION = Duration.ofMillis(5000);
+   private static final Duration DURATION = Duration.ofMillis(500);
 
   @Override
   public void beforeTestExecution(ExtensionContext extensionContext) throws Exception {
     Thread.sleep(DURATION);
-    System.out.flush();
   }
 
   @Override
   public void afterTestExecution(ExtensionContext extensionContext) throws Exception {
     Thread.sleep(DURATION);
-    System.out.flush();
   }
 }
