@@ -20,6 +20,7 @@ class TempDirTests {
         reporter.publishEntry("File system", tempDir.getFileSystem().getClass().getName());
 
         var testFile = tempDir.resolve("test.txt");
+        reporter.publishEntry("Test file", testFile.toAbsolutePath().toString());
 
         Files.writeString(testFile, "Hello, World!");
 
