@@ -8,17 +8,17 @@ public class FooTest {
 
     @BeforeAll
     static void setUp() {
-        System.out.println("    -> @BeforeAll in FooTest");
+        System.out.println("      --> @BeforeAll in FooTest");
     }
 
     @RepeatedTest(2)
     void test() {
-        System.out.println("      -> @Test in FooTest");
+        System.out.println("         --> @Test in FooTest");
     }
 
     @AfterAll
     static void tearDown() {
-        System.out.println("    -> @AfterAll in FooTest");
+        System.out.println("      --> @AfterAll in FooTest");
     }
 
 }

@@ -8,17 +8,17 @@ public class BarTest {
 
     @BeforeEach
     void setUp() {
-        System.out.println("    -> @BeforeEach in BarTest");
+        System.out.println("      --> @BeforeEach in BarTest");
     }
 
     @Test
     void test() {
-        System.out.println("      -> @Test in BarTest");
+        System.out.println("         --> @Test in BarTest");
     }
 
     @AfterEach
     void tearDown() {
-        System.out.println("    -> @AfterEach in BarTest");
+        System.out.println("      --> @AfterEach in BarTest");
     }
 
 }
